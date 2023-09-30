@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "blog/posts/2023-10-01-hello/index.html",
+    "href": "blog/posts/2023-10-01-hello/index.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "blog/posts/2023-10-01-hello/index.html#polar-axis",
+    "href": "blog/posts/2023-10-01-hello/index.html#polar-axis",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "nbdev Blog",
+    "section": "",
+    "text": "Quarto Computations\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nQuarto Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev-demo-project",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev-demo-project",
+    "section": "Install",
+    "text": "Install\npip install nbdev_demo_project"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev-demo-project",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "blog/posts/2023-10-01-computations/index.html",
+    "href": "blog/posts/2023-10-01-computations/index.html",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "import numpy as np\na = np.arange(15).reshape(3, 5)\na"
+  },
+  {
+    "objectID": "blog/posts/2023-10-01-computations/index.html#numpy",
+    "href": "blog/posts/2023-10-01-computations/index.html#numpy",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "import numpy as np\na = np.arange(15).reshape(3, 5)\na"
+  },
+  {
+    "objectID": "blog/posts/2023-10-01-computations/index.html#matplotlib",
+    "href": "blog/posts/2023-10-01-computations/index.html#matplotlib",
+    "title": "Quarto Computations",
+    "section": "Matplotlib",
+    "text": "Matplotlib\n\nimport matplotlib.pyplot as plt\n\nfig = plt.figure()\nx = np.arange(10)\ny = 2.5 * np.sin(x / 20 * np.pi)\nyerr = np.linspace(0.05, 0.2, 10)\n\nplt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')\nplt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')\nplt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,\n             label='uplims=True, lolims=True')\n\nupperlimits = [True, False] * 5\nlowerlimits = [False, True] * 5\nplt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,\n             label='subsets of uplims and lolims')\n\nplt.legend(loc='lower right')\nplt.show(fig)"
+  },
+  {
+    "objectID": "blog/posts/2023-10-01-computations/index.html#plotly",
+    "href": "blog/posts/2023-10-01-computations/index.html#plotly",
+    "title": "Quarto Computations",
+    "section": "Plotly",
+    "text": "Plotly\n\nimport plotly.express as px\nimport plotly.io as pio\ngapminder = px.data.gapminder()\ngapminder2007 = gapminder.query(\"year == 2007\")\nfig = px.scatter(gapminder2007, \n                 x=\"gdpPercap\", y=\"lifeExp\", color=\"continent\", \n                 size=\"pop\", size_max=60,\n                 hover_name=\"country\")\nfig.show()"
+  }
+]
